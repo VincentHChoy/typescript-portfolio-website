@@ -4,7 +4,7 @@ function Navbar() {
     return sections.map((section: string) => {
       return (
         <a
-          className="px-2 no-underline cursor-pointer font-bold hover:text-third"
+          className="cursor-pointer px-2 font-bold no-underline hover:text-third"
           onClick={(e) => {
             scrollToSection(section, e);
           }}
@@ -26,7 +26,7 @@ function Navbar() {
 
   return (
     <header className="h-1/6 py-14">
-      <div className="flex flex-col md:flex-row justify-between items-center md:p-10 text-lg">
+      <div className="flex flex-col items-center justify-between text-lg md:flex-row md:p-10">
         <h1 className="text-3xl"> VC.</h1>
         <section className="flex flex-row">{sectionHeaders}</section>
         {/* <Contact trigger={trigger} /> */}

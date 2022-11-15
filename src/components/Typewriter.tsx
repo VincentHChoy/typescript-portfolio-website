@@ -65,17 +65,15 @@ function Typewriter() {
       }
       <AiFillDownCircle
         size={50}
-        className="mx-auto h-1/6 animate-bounce cursor-pointer text-secondary hover:text-white"
+        className="mx-auto h-1/6 animate-bounce cursor-pointer text-white hover:text-secondary"
         onClick={(e) => {
           console.log("here");
           e.preventDefault();
-          document
-            ?.getElementById("skills")
-            ?.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-              inline: "nearest",
-            });
+          document?.getElementById("skills")?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            inline: "nearest",
+          });
         }}
       />
     </div>
