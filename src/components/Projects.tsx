@@ -57,16 +57,16 @@ function Projects() {
         <SiTailwindcss className="text-teal-400" size={30} />,
       ],
       stack: ["HTML5", "CSS5", "Typescript", "React", "Tailwind"],
-    }
+    },
   ];
 
   const projectContainers = () => {
     return projects.map((project) => {
       return (
-        <main className="mx-auto my-4 flex h-full w-5/6 flex-col items-center justify-center rounded-md bg-gradient-to-t from-secondary to-primary shadow-xl p-10 md:mx-4 md:w-1/3 md:justify-between">
+        <main className="mx-auto my-4 flex h-full w-5/6 flex-col items-center justify-center rounded-md bg-gradient-to-t from-secondary to-primary p-10 shadow-xl hover:-translate-y-4 lg:mx-4 lg:w-1/3 lg:justify-between ">
           <h1 className="text-3xl font-bold">{project.name}</h1>
           <a href={project.link} target="_blank">
-            <img className="my-4 w-56" src={project.preview} />
+            <img className="my-4 w-fit rounded-md" src={project.preview} />
           </a>
           <p className="text-center text-lg">{project.desc}</p>
           <section className="my-2 flex w-full flex-row flex-wrap items-start justify-center">
@@ -103,9 +103,9 @@ function Projects() {
   return (
     <section id="projects">
       <Fade>
-        <div className="flex flex-col items-center justify-around  md:h-screen md:flex-row">
+        <div className="flex flex-col items-center justify-around  lg:h-screen">
           <h1 className="break-words text-center text-4xl">Projects</h1>
-          <main className="flex h-4/6 flex-col items-start justify-around md:w-5/6 md:flex-row md:items-center">
+          <main className="flex h-5/6 flex-col items-start justify-around lg:w-5/6 lg:flex-row lg:items-center">
             {containers}
           </main>
         </div>
