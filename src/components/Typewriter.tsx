@@ -3,8 +3,9 @@ import TypewriterClass from "typewriter-effect";
 import { AiFillGithub, AiFillLinkedin, AiFillDownCircle } from "react-icons/ai";
 
 function Typewriter() {
+  const textColor = "#B4C5F8";
   return (
-    <div className="mx-4 flex h-screen flex-col items-center justify-center text-center">
+    <div className="mx-4 flex h-screen flex-col items-center justify-center text-center font-mont">
       <h1 className="text-4xl md:text-5xl ">
         <TypewriterClass
           options={{
@@ -14,17 +15,17 @@ function Typewriter() {
           onInit={(typewriter) => {
             typewriter
               .typeString(
-                `Hello, I am <span style="color: #93C5FD">Vincent Choy</span>`
+                `Hello, I am <span style="color: ${textColor}">Vincent Choy</span>`
               )
               .pauseFor(2000)
               .deleteChars(12)
               .typeString(
-                `a <span style="color: #93C5FD">full-stack developer</span>`
+                `a <span style="color: ${textColor}">full-stack developer</span>`
               )
               .pauseFor(2000)
               .deleteChars(22)
               .typeString(
-                `passionate for <span style="color: #93C5FD"> front-end development</span>`
+                `passionate for <span style="color: ${textColor}"> front-end development</span>`
               )
               .pauseFor(2000)
               .start();
@@ -38,7 +39,7 @@ function Typewriter() {
               href={"https://resume.creddle.io/resume/cdt4ump48qv"}
               target="_blank"
             >
-              <button className="h-1/6 rounded-md bg-secondary p-2 hover:bg-white hover:text-secondary">
+              <button className="text-opacity-0.5 h-1/6 rounded-md bg-white p-2 text-secondary hover:bg-secondary hover:text-white">
                 Resume
               </button>
             </a>
