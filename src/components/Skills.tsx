@@ -82,7 +82,7 @@ function Skills() {
   const skillContainer = () => {
     return skills.map((skill) => {
       return (
-        <main className="flex flex-col items-center justify-center rounded-md bg-gray-400 bg-opacity-30 mx-auto my-2 w-5/6 px-4 lg:w-1/3">
+        <main className="flex flex-col items-center justify-around rounded-md bg-gray-400 bg-opacity-30 mx-auto lg:mx-1 my-2 w-5/6 px-4 h-40 lg:w-1/4">
           <h1 className="my-2 text-center text-2xl italic">{skill.Title}</h1>
           <ul className="flex w-screen flex-row items-center justify-around lg:w-full px-4">
             {skill.icons.map((icon, index) => {
@@ -107,7 +107,7 @@ function Skills() {
           <h1 className="break-words text-center font-mont text-4xl font-bold">
             Skills
           </h1>
-          <main className="flex flex-col flex-wrap items-start justify-center p-10 lg:w-full lg:flex-row lg:items-center">
+          <main className="flex flex-col flex-wrap justify-around p-10 lg:w-full lg:flex-row lg:items-center">
             {skilledContainer}
           </main>
         </div>
