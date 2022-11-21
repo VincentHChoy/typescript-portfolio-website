@@ -82,9 +82,9 @@ function Skills() {
   const skillContainer = () => {
     return skills.map((skill) => {
       return (
-        <main className="flex flex-col items-center justify-around rounded-md bg-gray-400 bg-opacity-30 mx-auto lg:mx-1 my-2 w-5/6 px-4 h-40 lg:w-1/4">
+        <main className="mx-auto my-2 flex h-40 w-5/6 flex-col items-center justify-around rounded-md bg-gray-400 bg-opacity-30 px-4 lg:mx-1 lg:w-1/4">
           <h1 className="my-2 text-center text-2xl italic">{skill.Title}</h1>
-          <ul className="flex w-screen flex-row items-center justify-around lg:w-full px-4">
+          <ul className="flex w-screen flex-row items-center justify-around px-4 lg:w-full">
             {skill.icons.map((icon, index) => {
               return (
                 <ul className="flex flex-col items-center justify-center">
