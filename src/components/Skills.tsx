@@ -101,13 +101,13 @@ function Skills() {
   const skilledContainer: any = skillContainer();
 
   return (
-    <section id="skills" className={`m-auto h-fit w-4/6 p-2 text-4xl`}>
+    <section id="skills">
       <Fade>
         <div className="flex flex-col items-center justify-around">
           <h1 className="break-words text-center font-mont text-4xl font-bold">
             Skills
           </h1>
-          <main className="flex flex-col flex-wrap justify-center p-10 lg:w-full lg:flex-row lg:items-center">
+          <main className="flex flex-col flex-wrap justify-center p-10 lg:p-0 lg:w-full lg:flex-row lg:flex-wrap lg:items-center">
             {skilledContainer}
           </main>
         </div>
