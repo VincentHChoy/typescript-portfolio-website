@@ -1,5 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Timeline from "./components/Timeline";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Typewriter from "./components/Typewriter";
@@ -11,6 +12,7 @@ function App() {
     <div className="h-screen overflow-x-hidden bg-gradient-to-t from-third to-primary text-white">
       <Navbar />
       <Typewriter />
+      <Timeline/>
       <Skills />
       <Projects />
       <Education />
