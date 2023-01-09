@@ -63,7 +63,7 @@ function Projects() {
   const projectContainers = () => {
     return projects.map((project) => {
       return (
-        <main className="mx-auto my-4 flex h-full w-5/6 flex-col items-center justify-center rounded-md bg-gray-400 bg-opacity-30 p-10 shadow-xl hover:-translate-y-4 lg:mx-4 lg:w-1/3 lg:justify-between ">
+        <main className="mx-auto my-4 flex h-full w-5/6 flex-col items-center justify-center rounded-md bg-[#3e363f] bg-opacity-80 border-b-4 border-b-white p-10 shadow-xl transform hover:-translate-y-10 transition duration-500 ease-in-out lg:mx-4 lg:w-1/3 lg:justify-between ">
           <h1 className="text-3xl font-bold">{project.name}</h1>
           <a href={project.link} target="_blank">
             <img className="my-4 h-40 w-fit rounded-md" src={project.preview} />

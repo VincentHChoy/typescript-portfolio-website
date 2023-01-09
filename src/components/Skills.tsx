@@ -82,7 +82,7 @@ function Skills() {
   const skillContainer = () => {
     return skills.map((skill) => {
       return (
-        <main className="mx-auto my-2 flex h-40 w-5/6 flex-col items-center justify-around rounded-md bg-gray-400 bg-opacity-30 px-4 shadow-xl lg:my-4 lg:mx-4 lg:w-1/4">
+        <main className="mx-auto my-2 flex h-40 w-5/6 flex-col items-center justify-around rounded-md bg-opacity-30 px-4 lg:my-4 lg:mx-4 lg:w-1/4">
           <h1 className="my-2 text-center text-2xl italic">{skill.Title}</h1>
           <ul className="flex w-screen flex-row items-center justify-around px-4 lg:w-full">
             {skill.icons.map((icon, index) => {
@@ -101,13 +101,13 @@ function Skills() {
   const skilledContainer: any = skillContainer();
 
   return (
-    <section id="skills">
+    <section className="my-8" id="skills">
       <Fade>
         <div className="flex flex-col items-center justify-around">
-          <h1 className="break-words text-center font-mont text-4xl font-bold">
+          <h1 className="break-words text-center font-mont text-4xl font-bold my-10">
             Skills
           </h1>
-          <main className="flex flex-col flex-wrap justify-center p-10 lg:p-0 lg:w-full lg:flex-row lg:flex-wrap lg:items-center">
+          <main className="flex flex-col flex-wrap justify-center border-b-4 border-b-white bg-[#3e363f] bg-opacity-80 p-10 shadow-xl w-11/12 lg:w-4/5 lg:flex-row lg:flex-wrap lg:items-center lg:p-0 ">
             {skilledContainer}
           </main>
         </div>
