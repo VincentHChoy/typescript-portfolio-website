@@ -70,7 +70,7 @@ function Typewriter() {
         onClick={(e) => {
           console.log("here");
           e.preventDefault();
-          document?.getElementById("skills")?.scrollIntoView({
+          document?.getElementById("story")?.scrollIntoView({
             behavior: "smooth",
             block: "start",
             inline: "nearest",
