@@ -60,7 +60,7 @@ function Contact() {
 
   return (
     <>
-      <h1 className="my-5 break-words text-center font-mont text-4xl font-bold">
+      <h1 id="contact" className="my-5 break-words text-center font-mont text-4xl font-bold">
         Contact Me!
       </h1>
       <img
