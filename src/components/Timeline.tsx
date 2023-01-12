@@ -4,12 +4,17 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { IoMdSchool, IoMdBriefcase } from "react-icons/io";
-import {AiFillStar} from 'react-icons/ai'
+import { AiFillStar } from "react-icons/ai";
 
 function Timeline() {
   return (
-    <section className="flex flex-col justify-around items-center my-20">
-      <h1 className="vertical-timeline-element-title text-6xl font-bold">My Story</h1>
+    <section className="my-20 flex flex-col items-center justify-around">
+      <h1
+        id="story"
+        className="vertical-timeline-element-title text-6xl font-bold"
+      >
+        My Story
+      </h1>
       <VerticalTimeline>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
@@ -19,6 +24,10 @@ function Timeline() {
           date="2014"
           icon={<IoMdSchool />}
         >
+          <section className="flex flex-row">
+            <img className="-mx-8 h-28 invert" src="uofa.png" />
+            <img className="h-28 invert" src="engg.png" />
+          </section>
           <h3 className="vertical-timeline-element-title text-lg font-bold">
             Civil Engineering at University of Alberta
           </h3>
@@ -34,6 +43,10 @@ function Timeline() {
           iconStyle={{ background: "#3e363f", color: "#fff" }}
           icon={<IoMdBriefcase />}
         >
+          <img
+            className="h-16 w-32"
+            src="https://www.camrose.ca/en/images/structure/logo.svg"
+          />
           <h3 className="vertical-timeline-element-title text-lg font-bold">
             Municipal Engineering Co-op Student
           </h3>
@@ -78,6 +91,10 @@ function Timeline() {
           iconStyle={{ background: "#3e363f", color: "#fff" }}
           icon={<IoMdBriefcase />}
         >
+          <img
+            className="h-20 w-48"
+            src="https://upload.wikimedia.org/wikipedia/commons/5/56/Transports_Canada.svg"
+          />
           <h3 className="vertical-timeline-element-title text-lg font-bold">
             FME Developer
           </h3>
@@ -113,6 +130,10 @@ function Timeline() {
           iconStyle={{ background: "#3e363f", color: "#fff" }}
           icon={<IoMdBriefcase />}
         >
+          <img
+            className="my-2 w-48 invert"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/City_of_Edmonton_Logo.svg/1280px-City_of_Edmonton_Logo.svg.png"
+          />
           <h3 className="vertical-timeline-element-title text-lg font-bold">
             Environmental Engineering Co-op Student
           </h3>
@@ -148,6 +169,10 @@ function Timeline() {
           iconStyle={{ background: "#3e363f", color: "#fff" }}
           icon={<IoMdSchool />}
         >
+          <section className="flex flex-row">
+            <img className="-mx-8 h-28 invert" src="uofa.png" />
+            <img className="h-28 invert" src="engg.png" />
+          </section>
           <h3 className="vertical-timeline-element-title text-lg font-bold">
             Graduated from Civil Engineering at the University of Alberta
           </h3>
@@ -160,6 +185,10 @@ function Timeline() {
           iconStyle={{ background: "#3e363f", color: "#fff" }}
           icon={<IoMdBriefcase />}
         >
+          <img
+            className="my-2 w-48 rounded-md"
+            src="https://promark-leeroy.s3.us-east-2.amazonaws.com/2021/09/Logo-Promark-telecon-1-1.jpg"
+          />
           <h3 className="vertical-timeline-element-title text-lg font-bold">
             Fibre Network Design EIT
           </h3>
@@ -200,6 +229,10 @@ function Timeline() {
           date="2022"
           icon={<IoMdSchool />}
         >
+          <img
+            className="my-2 h-16 invert"
+            src="https://www.lighthouselabs.ca/assets/lighthouselabs-logo-d5df6d383f7466b06a64de9561fd537493502eafe78bbf3bcd3de82884e5dd85.png"
+          />
           <h3 className="vertical-timeline-element-title text-lg font-bold">
             Full-stack Web Development Bootcamp at Lighthouse Labs
           </h3>
