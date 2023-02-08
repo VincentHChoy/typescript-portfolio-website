@@ -21,6 +21,14 @@ import {
 import { FaBootstrap } from "react-icons/fa";
 
 function Skills() {
+
+  interface Skill {
+    Title: string,
+    names: string[],
+    icons: JSX.Element[],
+  }
+  
+
   const skills = [
     {
       Title: "Markup/Styling",
@@ -80,7 +88,7 @@ function Skills() {
   ];
 
   const skillContainer = () => {
-    return skills.map((skill) => {
+    return skills.map((skill: Skill) => {
       return (
         <main className="mx-auto my-2 flex h-40 w-5/6 flex-col items-center justify-around rounded-md bg-opacity-30 px-4 lg:my-4 lg:mx-4 lg:w-1/4">
           <h1 className="my-2 text-center text-2xl italic">{skill.Title}</h1>
@@ -98,7 +106,7 @@ function Skills() {
       );
     });
   };
-  const skilledContainer: any = skillContainer();
+  const skilledContainer: JSX.Element[] = skillContainer();
 
   return (
     <section className="my-8" id="skills">

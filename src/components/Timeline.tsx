@@ -6,7 +6,7 @@ import "react-vertical-timeline-component/style.min.css";
 import { IoMdSchool, IoMdBriefcase } from "react-icons/io";
 import { AiFillStar } from "react-icons/ai";
 
-function Timeline() {
+const Timeline = () => {
   return (
     <section className="my-20 flex flex-col items-center justify-around">
       <h1

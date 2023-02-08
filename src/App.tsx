@@ -7,9 +7,9 @@ import Typewriter from "./components/Typewriter";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
 
-function App() {
+const App = () => {
   return (
-    <div className="h-screen overflow-x-hidden bg-gradient-to-t from-third to-primary text-white">
+    <main className="h-screen overflow-x-hidden bg-gradient-to-t from-third to-primary text-white">
       <Navbar />
       <Typewriter />
       <Timeline/>
@@ -17,7 +17,7 @@ function App() {
       <Projects />
       <Education />
       <Contact />
-    </div>
+    </main>
   );
 }
 

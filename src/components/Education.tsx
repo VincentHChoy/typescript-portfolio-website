@@ -1,7 +1,16 @@
 import { Fade } from "react-awesome-reveal";
 
 function Education() {
-  const projects = [
+
+  interface School {
+    name: string,
+    preview: string,
+    link: string,
+    desc: string,
+    stack: string[]
+  }
+
+  const schools = [
     {
       name: "University of Alberta",
       preview: "Logo_Engg2.png",
@@ -20,18 +29,18 @@ function Education() {
   ];
 
   const educationContainers = () => {
-    return projects.map((project) => {
+    return schools.map((school: School) => {
       return (
         <main className="mx-auto my-4 flex h-2/3 w-5/6 transform flex-col items-center justify-center rounded-md border-b-4 border-b-white bg-[#3e363f] bg-opacity-80 p-10 shadow-xl transition duration-500 ease-in-out hover:-translate-y-10 lg:mx-4 lg:w-1/3 lg:items-center lg:justify-between">
-          <h1 className="text-3xl font-bold">{project.name}</h1>
-          <a href={project.link} target="_blank">
+          <h1 className="text-3xl font-bold">{school.name}</h1>
+          <a href={school.link} target="_blank">
             <img
               className="my-4 h-fit w-fit rounded-md"
-              src={project.preview}
+              src={school.preview}
             />
           </a>
           <p className="break-normal text-2xl font-bold lg:text-xl">
-            {project.desc}
+            {school.desc}
           </p>
           {/* <section className="my-2 flex w-full flex-row flex-wrap items-start justify-center"></section>
           <footer></footer> */}

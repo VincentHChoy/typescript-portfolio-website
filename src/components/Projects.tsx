@@ -8,7 +8,18 @@ import {
   SiTypescript,
 } from "react-icons/si";
 
-function Projects() {
+
+interface Project {
+  name: string;
+  github: string;
+  preview: string;
+  link: string;
+  desc: string;
+  icons: JSX.Element[]
+  stack: React.ReactNode[]
+}
+
+const Projects = () => {
   const projects = [
     {
       name: "Climbr",
@@ -61,7 +72,7 @@ function Projects() {
   ];
 
   const projectContainers = () => {
-    return projects.map((project) => {
+    return projects.map((project: Project) => {
       return (
         <main className="mx-auto my-4 flex h-full w-5/6 transform flex-col items-center justify-center rounded-md border-b-4 border-b-white bg-[#3e363f] bg-opacity-80 p-10 shadow-xl transition duration-500 ease-in-out hover:-translate-y-10 lg:mx-4 lg:w-1/3 lg:justify-between ">
           <h1 className="text-3xl font-bold">{project.name}</h1>
@@ -70,7 +81,7 @@ function Projects() {
           </a>
           <p className="text-center text-lg">{project.desc}</p>
           <section className="my-2 flex w-full flex-row flex-wrap items-start justify-center">
-            {project.icons.map((icon, index) => {
+            {project.icons.map((icon: React.ReactNode, index: number) => {
               return (
                 <div className="m-2 flex flex-col items-center">
                   {icon}

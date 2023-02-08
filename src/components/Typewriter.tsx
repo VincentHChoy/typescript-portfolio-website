@@ -2,7 +2,7 @@ import { useState } from "react";
 import TypewriterClass from "typewriter-effect";
 import { AiFillGithub, AiFillLinkedin, AiFillDownCircle } from "react-icons/ai";
 
-function Typewriter() {
+const Typewriter = () => {
   const textColor = "#B4C5F8";
   return (
     <div className="mx-4 flex h-screen flex-col items-center justify-center text-center font-mont">
