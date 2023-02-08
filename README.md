@@ -2,4 +2,4 @@
 
 Done with React, Typescript, and Tailwind CSS. 
 
-You can visited and viewed at https://www.vincentchoy.ca
+Can be visited and viewed at https://www.vincentchoy.ca
