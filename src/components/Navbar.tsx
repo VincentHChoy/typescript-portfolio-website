@@ -1,24 +1,23 @@
-const Navbar = () => {
+export const Navbar = () => {
   const sectionsMenu = () => {
     const sections: string[] = ["skills", "projects", "education", "contact"];
 
     const scrollToSection = (section: string, e: React.MouseEvent<HTMLAnchorElement>) => {
       let sectionId = document.getElementById(section);
       e.preventDefault();
-      sectionId &&
-        sectionId.scrollIntoView({ behavior: "smooth", block: "start" });
+      sectionId && sectionId.scrollIntoView({ behavior: "smooth", block: "start" });
     };
-    
+
     return sections.map((section: string) => {
       return (
-        <a
+        <span
           className="cursor-pointer px-2 font-bold no-underline hover:text-third"
           onClick={(event: React.MouseEvent<HTMLAnchorElement>) => {
             scrollToSection(section, event);
           }}
         >
           <h3>{section}</h3>
-        </a>
+        </span>
       );
     });
   };
@@ -40,6 +39,4 @@ const Navbar = () => {
       </div>
     </header>
   );
-}
-
-export default Navbar;
+};

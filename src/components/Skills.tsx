@@ -2,14 +2,7 @@ import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
 import { FaNodeJs } from "react-icons/fa";
 import { Fade } from "react-awesome-reveal";
 
-import {
-  DiCss3,
-  DiRuby,
-  DiReact,
-  DiJqueryLogo,
-  DiNpm,
-  DiDatabase,
-} from "react-icons/di";
+import { DiCss3, DiReact, DiJqueryLogo, DiNpm, DiDatabase } from "react-icons/di";
 import {
   SiTailwindcss,
   SiJavascript,
@@ -20,19 +13,11 @@ import {
 } from "react-icons/si";
 import { FaBootstrap } from "react-icons/fa";
 
-function Skills() {
-
-  interface Skill {
-    Title: string,
-    names: string[],
-    icons: JSX.Element[],
-  }
-  
-
+export function Skills() {
   const skills = [
     {
       Title: "Markup/Styling",
-      names: ["HTML5", "CSS", "Tailwind CSS", "BootStrap"],
+      names: ["HTML5", "CSS", "Tailwind", "BootStrap"],
       icons: [
         <AiFillHtml5 className="text-6xl text-orange-400" />,
         <DiCss3 className="text-6xl text-blue-400" />,
@@ -42,20 +27,20 @@ function Skills() {
     },
     {
       Title: "Programing Languages",
-      names: ["Javascript", "Typescript", "Ruby"],
+      names: ["Javascript", "Typescript"],
       icons: [
         <SiJavascript className="text-6xl text-yellow-400" />,
         <SiTypescript className="text-6xl text-blue-400" />,
-        <DiRuby className="text-6xl text-red-400" />,
       ],
     },
     {
       Title: "Javascript Frameworks",
-      names: ["React", "Redux", "jQuery"],
+      names: ["React", "Redux", "jQuery", "NextJs"],
       icons: [
         <DiReact className="text-6xl text-teal-400" />,
         <SiRedux className="text-6xl text-blue-400" />,
         <DiJqueryLogo className="text-6xl text-blue-400" />,
+        <DiReact className="text-6xl text-teal-400" />,
       ],
     },
     {
@@ -69,7 +54,7 @@ function Skills() {
       icons: [<DiDatabase className="text-6xl text-blue-400" />],
     },
     {
-      Title: "Database Management",
+      Title: "Source Control",
       names: ["Github", "Git"],
       icons: [
         <AiFillGithub className="text-6xl text-white" />,
@@ -88,7 +73,7 @@ function Skills() {
   ];
 
   const skillContainer = () => {
-    return skills.map((skill: Skill) => {
+    return skills.map((skill) => {
       return (
         <main className="mx-auto my-2 flex h-40 w-5/6 flex-col items-center justify-around rounded-md bg-opacity-30 px-4 lg:my-4 lg:mx-4 lg:w-1/4">
           <h1 className="my-2 text-center text-2xl italic">{skill.Title}</h1>
@@ -96,7 +81,7 @@ function Skills() {
             {skill.icons.map((icon, index) => {
               return (
                 <ul className="flex flex-col items-center justify-center">
-                  <a>{icon}</a>
+                  <span>{icon}</span>
                   <h1 className="text-sm">{skill.names[index]}</h1>
                 </ul>
               );
@@ -112,19 +97,12 @@ function Skills() {
     <section className="my-8" id="skills">
       <Fade>
         <div className="flex flex-col items-center justify-around">
-          <h1 className="break-words text-center font-mont text-4xl font-bold my-10">
-            Skills
-          </h1>
-          <main className="flex flex-col flex-wrap justify-center border-b-4 border-b-white bg-[#3e363f] bg-opacity-80 p-10 shadow-xl w-11/12 lg:w-4/5 lg:flex-row lg:flex-wrap lg:items-center lg:p-0 ">
+          <h1 className="my-10 break-words text-center font-mont text-4xl font-bold">Skills</h1>
+          <main className="flex w-11/12 flex-col flex-wrap justify-center border-b-4 border-b-white bg-[#3e363f] bg-opacity-80 p-10 shadow-xl lg:w-4/5 lg:flex-row lg:flex-wrap lg:items-center lg:p-0 ">
             {skilledContainer}
           </main>
         </div>
       </Fade>
     </section>
-    // <section className="h-screen text-4xl bg-gradient-to-b from-third text-white">
-    //   <h1 className='mx-10'>Skills and Technologies</h1>
-    // </section>
   );
 }
-
-export default Skills;

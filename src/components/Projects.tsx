@@ -1,13 +1,7 @@
 import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
 import { Fade } from "react-awesome-reveal";
 import { DiCss3, DiReact } from "react-icons/di";
-import {
-  SiTailwindcss,
-  SiJavascript,
-  SiRedux,
-  SiTypescript,
-} from "react-icons/si";
-
+import { SiTailwindcss, SiJavascript, SiRedux, SiTypescript } from "react-icons/si";
 
 interface Project {
   name: string;
@@ -15,11 +9,11 @@ interface Project {
   preview: string;
   link: string;
   desc: string;
-  icons: JSX.Element[]
-  stack: React.ReactNode[]
+  icons: JSX.Element[];
+  stack: React.ReactNode[];
 }
 
-const Projects = () => {
+export const Projects = () => {
   const projects = [
     {
       name: "Climbr",
@@ -74,7 +68,7 @@ const Projects = () => {
   const projectContainers = () => {
     return projects.map((project: Project) => {
       return (
-        <main className="mx-auto my-4 flex h-full w-5/6 transform flex-col items-center justify-center rounded-md border-b-4 border-b-white bg-[#3e363f] bg-opacity-80 p-10 shadow-xl transition duration-500 ease-in-out hover:-translate-y-10 lg:mx-4 lg:w-1/3 lg:justify-between ">
+        <main className="mx-auto my-4 flex h-full w-5/6 transform flex-col items-center justify-center rounded-md border-b-4 border-b-white bg-[#3e363f] bg-opacity-80 p-10 shadow-xl transition duration-500 ease-in-out lg:mx-4 lg:w-1/3 lg:justify-between ">
           <h1 className="text-3xl font-bold">{project.name}</h1>
           <a href={project.link} target="_blank">
             <img className="my-4 h-40 w-fit rounded-md" src={project.preview} />
@@ -92,10 +86,7 @@ const Projects = () => {
           </section>
           <footer>
             <a href={project.github}>
-              <AiFillGithub
-                className="cursor-pointer hover:text-primary"
-                size={45}
-              />
+              <AiFillGithub className="cursor-pointer hover:text-primary" size={45} />
               <a
                 href={project.link}
                 target="_blank"
@@ -116,16 +107,12 @@ const Projects = () => {
     <section id="projects">
       <Fade>
         <div className="flex flex-col items-center justify-around lg:h-screen">
-          <h1 className="break-words text-center font-mont text-4xl font-bold">
-            Projects
-          </h1>
-          <main className="flex h-5/6 flex-col items-start justify-around lg:w-5/6 lg:flex-row lg:items-center">
+          <h1 className="break-words text-center font-mont text-4xl font-bold">Projects</h1>
+          <main className="my-2 flex h-max flex-col items-start justify-around lg:w-5/6 lg:flex-row lg:items-center">
             {containers}
           </main>
         </div>
       </Fade>
     </section>
   );
-}
-
-export default Projects;
+};

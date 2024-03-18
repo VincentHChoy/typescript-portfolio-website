@@ -1,8 +1,7 @@
-import { useState } from "react";
 import TypewriterClass from "typewriter-effect";
 import { AiFillGithub, AiFillLinkedin, AiFillDownCircle } from "react-icons/ai";
 
-const Typewriter = () => {
+export const Typewriter = () => {
   const textColor = "#B4C5F8";
   return (
     <div className="mx-4 flex h-screen flex-col items-center justify-center text-center font-mont">
@@ -14,20 +13,12 @@ const Typewriter = () => {
           }}
           onInit={(typewriter) => {
             typewriter
-              .typeString(
-                `Hello, I am <span style="color: ${textColor}">Vincent Choy</span>`
-              )
+              .typeString(`Hello, I am <span style="color: ${textColor}">Vincent Choy</span>`)
               .pauseFor(2000)
               .deleteChars(12)
-              .typeString(
-                `a <span style="color: ${textColor}">full-stack developer</span>`
-              )
+              .typeString(`a <span style="color: ${textColor}">full-stack developer</span>`)
               .pauseFor(2000)
               .deleteChars(22)
-              .typeString(
-                `passionate for <span style="color: ${textColor}"> front-end development</span>`
-              )
-              .pauseFor(2000)
               .start();
           }}
         />
@@ -37,6 +28,7 @@ const Typewriter = () => {
           <div className="flex h-1/6 w-40 animate-fade-in-down flex-row items-center justify-around">
             <a
               href={"https://resume.creddle.io/resume/cdt4ump48qv"}
+              rel="noreferrer"
               target="_blank"
             >
               <button className="text-opacity-0.5 h-1/6 rounded-md bg-white p-2 text-secondary hover:bg-secondary hover:text-white">
@@ -79,6 +71,4 @@ const Typewriter = () => {
       />
     </div>
   );
-}
-
-export default Typewriter;
+};
