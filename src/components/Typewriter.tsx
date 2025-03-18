@@ -27,7 +27,7 @@ export const Typewriter = () => {
         <>
           <div className="flex h-1/6 w-40 animate-fade-in-down flex-row items-center justify-around">
             <a
-              href={"https://resume.creddle.io/resume/cdt4ump48qv"}
+              href={"https://drive.google.com/file/d/1ckNvJ67mziaLbtFuzuLyu4kw51YN6nRx/view"}
               rel="noreferrer"
               target="_blank"
             >
